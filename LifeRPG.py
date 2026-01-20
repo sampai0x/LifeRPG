@@ -78,9 +78,12 @@ def main():
 
         elif opcao == '2':
             print("\n--- QUADRO DE MISSÕES ---")
-            # TÓPICO: LOOPS (Iterando sobre a lista)
-            for index, missao in enumerate(lista_de_missoes):
-                print(f"{index}. {missao}")
+            
+            if not lista_de_missoes:
+                print("📭 Nenhuma missão encontrada. Adicione uma na opção 1!")
+            else:
+                for index, missao in enumerate(lista_de_missoes):
+                    print(f"{index}. {missao}")
         
         elif opcao == '3':
             # TÓPICO: VARIABLES & INPUT
